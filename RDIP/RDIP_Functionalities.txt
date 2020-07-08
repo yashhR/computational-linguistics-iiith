@@ -1,0 +1,13 @@
+Goal 1:Understand the Experiment
+The functionalities available in the experiment are as follows:
+*In Experiment column, contains a drop-down menu to choose the desired language in between english and hindi.
+*Few words(Which are already pre-defined) appear on the screen which are randomly arranged.
+*You can select the words you think can form a sentence which is grammatically correct.
+*After finishing it, you can view two more options on your screen, (i)Re-form the sentence (ii)Check the correctness of this sentence
+*On clicking the second one, i.e. Check the correctness of this sentence, you can check whether the sentence is grammatically correct or incorrect.
+*Then another option appears, "Get Correct Sentence". 
+*Clicking on that option, you can now view the correct sentence formation using those words
+*If correct, display "Right answers": If sentence match with the standard, display "Right answers" or using alert message.
+*If wrong, display it and make the toggle button "show the correct answer" to appear itself.
+*On clicking "Hide the correct Sentence" it'll hide the answers for the words in sentence formation
+*"Get Answers" to display the answers again
