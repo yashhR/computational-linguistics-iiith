@@ -106,13 +106,23 @@ function selclang()
             var words=[];
             var i=0,j=0;
             while(randomsent.length>i)
-            { j = Math.floor(Math.random() * randomsent.length);
+            { 
+                j = Math.floor(Math.random() * randomsent.length);
                 if(randomsent[j]!="no"){
                 words[i]=randomsent[j];
                 arrwords[j]="no";
                 i++;
                 }
-        }
+            }
+            var k=0;
+            cn=0;
+            wordcn = words.length
+            document.getElementById("wordsjumble").innerHTML=" "
+            for(k=0;k<wordcn;k++)
+            {
+                document.getElementById("wordsjumble").innerHTML += "<button class='btn' id='btn"+i+"' value='"+words[i]+"' onclick='randomfunc(this.id,this.value);'>"+words[i]+"</button>";  
+            }
+             reformButtons=document.getElementById("jumbled-words").innerHTML ;
         else if(language==='hindi')
         {
                 document.getElementById("formedsent").innerHTML="";
@@ -142,6 +152,15 @@ function selclang()
                     i++;
                     }
             }
+            var k=0;
+            cn=0;
+            wordcn = words.length
+            document.getElementById("wordsjumble").innerHTML=" "
+            for(k=0;k<wordcn;k++)
+            {
+                document.getElementById("wordsjumble").innerHTML += "<button class='btn' id='btn"+i+"' value='"+words[i]+"' onclick='randomfunc(this.id,this.value);'>"+words[i]+"</button>";  
+            }
+             reformButtons=document.getElementById("jumbled-words").innerHTML ;
         else
         {
             document.getElementById("selectionintro").innerHTML="";
@@ -155,4 +174,14 @@ function selclang()
             document.getElementById("wrong").innerHTML="";
             document.getElementById("correctans").innerHTML="";
             alert("Select a language to continue");
+        }
+}
+function randomfunc(bid,bvalue)
+        {
+           // console.log(bid,bvalue);
+            document.getElementById("formedsent").innerHTML="Formed Sentence <span>(after selecting words):</span>";
+            document.getElementById("choosenword").innerHTML +=" "+bvalue;
+            document.getElementById(bid).style.display="none";
+            document.getElementById("reformsent").innerHTML = "<button class='reform' id='reform'> Re-form the sentence</button>";
+            cn++;
         }
