@@ -182,6 +182,21 @@ function randomfunc(bid,bvalue)
             document.getElementById("formedsent").innerHTML="Formed Sentence <span>(after selecting words):</span>";
             document.getElementById("choosenword").innerHTML +=" "+bvalue;
             document.getElementById(bid).style.display="none";
-            document.getElementById("reformsent").innerHTML = "<button class='reform' id='reform'> Re-form the sentence</button>";
+            document.getElementById("reformsent").innerHTML = "<button class='reform' id='reform' onclick='reformfun()'> Re-form the sentence</button>";
             cn++;
         }
+        function reform()
+    {
+        //console.log(reformButtons);
+        document.getElementById("wordsjumble").innerHTML = reformsent;
+        document.getElementById("formedsent").innerHTML="";
+        document.getElementById("choosenword").innerHTML ="";
+        document.getElementById("reformsent").innerHTML = "";
+        cn=0;
+        document.getElementById("checksent").innerHTML="";
+        document.getElementById("correct").innerHTML="";
+        document.getElementById("wrong").innerHTML="";
+        document.getElementById("correctans").innerHTML=""
+
+
+    }
