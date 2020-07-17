@@ -79,6 +79,10 @@
                             'वहाँ‌ ‌है‌ ‌बड़ी‌ ‌सी‌ ‌एक‌ ‌किताब‌',
                             '‌है‌ ‌वहाँ‌ ‌एक‌ ‌बड़ी‌ ‌सी‌ ‌किताब‌',
                             'है‌ ‌वहाँ‌ ‌बड़ी‌ ‌सी‌ ‌एक‌ ‌किताब‌'];
+var selsent;
+var reformsent;
+var cn=0
+var wordcn=0;                            
 
 function selclang()
 {
@@ -178,16 +182,23 @@ function selclang()
 }
 function randomfunc(bid,bvalue)
         {
-           // console.log(bid,bvalue);
             document.getElementById("formedsent").innerHTML="Formed Sentence <span>(after selecting words):</span>";
             document.getElementById("choosenword").innerHTML +=" "+bvalue;
             document.getElementById(bid).style.display="none";
             document.getElementById("reformsent").innerHTML = "<button class='reform' id='reform' onclick='reformfun()'> Re-form the sentence</button>";
             cn++;
+            if(wordcount==cn && wordcn>0)
+            {
+                selsent = document.getElementById("choosenword").innerHTML;
+                document.getElementById("checksent").innerHTML="<button id='check' onclick='check()'>Check Correctness of the Sentence</button>";                
+                console.log(selsent);
+            }
+            else{
+                document.getElementById("checksent").innerHTML="";   
+            }
         }
         function reform()
     {
-        //console.log(reformButtons);
         document.getElementById("wordsjumble").innerHTML = reformsent;
         document.getElementById("formedsent").innerHTML="";
         document.getElementById("choosenword").innerHTML ="";
