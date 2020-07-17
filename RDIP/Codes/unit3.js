@@ -1,17 +1,4 @@
-function selclang(){
 
-    var language = document.getElementById("langsel").value;
-
-        if(language==='english'|| language==='hindi')
-        {  
-            document.getElementById("introd").innerHTML="Form a sentence (Declarative or Interrogative or any other type) from the given words";
-            document.getElementById("selectionintro").innerHTML="(select the buttons in proper order)";
-            document.getElementById("introd").style.color="gray";
-            document.getElementById("introd").style.fontSize="100%";
-            document.getElementById("selectionintro").style.color="gray";
-        }
-        if(language==='english')
-        {
                 var eng1 = ['John ate an apple before afternoon',
                             'before afternoon John ate an apple',
                             'John before afternoon ate an apple'];
@@ -46,8 +33,6 @@ function selclang(){
                             'I‌ ‌bought‌ ‌a‌ ‌book‌ ‌that‌ ‌I‌ ‌told‌ ‌her‌ ‌yesterday‌',
                             'I‌ ‌bought‌ ‌a‌ ‌book‌ ‌yesterday‌ ‌that‌ ‌I‌ ‌told‌ ‌her‌',
                             'yesterday‌ ‌I‌ ‌bought‌ ‌a‌ ‌book‌ ‌that‌ ‌I‌ ‌told‌ ‌her‌'];
-                }
-        else if(language=='hindi'){
                 var hin1 = ['राम‌ ‌और‌ ‌श्याम‌ ‌बाजार‌ ‌गयें‌',
                             'राम‌ ‌और‌ ‌श्याम‌ ‌गयें‌ ‌बाजार‌',
                             'बाजार‌ ‌गयें‌ ‌राम‌ ‌और‌ ‌श्याम‌',
@@ -94,9 +79,80 @@ function selclang(){
                             'वहाँ‌ ‌है‌ ‌बड़ी‌ ‌सी‌ ‌एक‌ ‌किताब‌',
                             '‌है‌ ‌वहाँ‌ ‌एक‌ ‌बड़ी‌ ‌सी‌ ‌किताब‌',
                             'है‌ ‌वहाँ‌ ‌बड़ी‌ ‌सी‌ ‌एक‌ ‌किताब‌'];
-                        }
+
+function selclang()
+{
+
+     language = document.getElementById("langsel").value;
+
+    if(language==='english')
+    {
+            document.getElementById("formedsent").innerHTML="";
+            document.getElementById("choosenword").innerHTML ="";
+            document.getElementById("reformsent").innerHTML = "";
+            document.getElementById("checksent").innerHTML="";
+            document.getElementById("correct").innerHTML="";
+            document.getElementById("wrong").innerHTML="";
+            document.getElementById("correctans").innerHTML="";
+            allEnglish = [engl1,engl2,engl3,engl4,engl5,engl6,engl7,engl8,engl9,engl10];
+            document.getElementById("introd").innerHTML="Form a sentence (Declarative or Interrogative or any other type) from the given words";
+            document.getElementById("selectionintro").innerHTML="(select the buttons in proper order)";
+            document.getElementById("introd").style.color="gray";
+            document.getElementById("introd").style.fontSize="100%";
+            document.getElementById("selectionintro").style.color="gray";
+            randomEnglish = allEnglish[Math.floor(Math.random() * allEnglish.length)];
+            randomEnglishSentence = randomEnglish[Math.floor(Math.random() * randomEnglish.length)];
+            var randomsent=randomEnglishSentence.split(" ");
+            var words=[];
+            var i=0,j=0;
+            while(randomsent.length>i)
+            { j = Math.floor(Math.random() * randomsent.length);
+                if(randomsent[j]!="no"){
+                words[i]=randomsent[j];
+                arrwords[j]="no";
+                i++;
+                }
+        }
+        else if(language==='hindi')
+        {
+                document.getElementById("formedsent").innerHTML="";
+                document.getElementById("choosenword").innerHTML ="";
+                document.getElementById("reformsent").innerHTML = "";
+                document.getElementById("checksent").innerHTML="";
+                document.getElementById("wordsjumble").innerHTML=" "
+                document.getElementById("correct").innerHTML="";
+                document.getElementById("wrong").innerHTML="";
+                document.getElementById("correctans").innerHTML="";
+                allHindi = [hin1,hin2,hin3,hin4,hin5,hin6,hin7];
+                document.getElementById("introd").innerHTML="Form a sentence (Declarative or Interrogative or any other type) from the given words";
+                document.getElementById("selectionintro").innerHTML="(select the buttons in proper order)";
+                document.getElementById("introd").style.color="gray";
+                document.getElementById("introd").style.fontSize="100%";
+                document.getElementById("selectionintro").style.color="gray";
+                randomHindi = allHindi[Math.floor(Math.random() * allHindi.length)];
+                randomHindiSentence = randomHindi[Math.floor(Math.random() * randomHindi.length)];
+                var randomsent=randomHindiSentence.split(" ");
+                var words=[];
+                var i=0,j=0;
+                while(randomsent.length>i)
+                { j = Math.floor(Math.random() * randomsent.length);
+                    if(randomsent[j]!="no"){
+                    words[i]=randomsent[j];
+                    arrwords[j]="no";
+                    i++;
+                    }
+            }
         else
         {
-                alert("Choose a language");
+            document.getElementById("selectionintro").innerHTML="";
+            document.getElementById("introd").innerHTML=
+            document.getElementById("formedsent").innerHTML="";
+            document.getElementById("choosenword").innerHTML ="";
+            document.getElementById("reformsent").innerHTML = "";
+            document.getElementById("checksent").innerHTML="";
+            document.getElementById("wordsjumble").innerHTML=" "
+            document.getElementById("correct").innerHTML="";
+            document.getElementById("wrong").innerHTML="";
+            document.getElementById("correctans").innerHTML="";
+            alert("Select a language to continue");
         }
-    }
