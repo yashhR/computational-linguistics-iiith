@@ -250,7 +250,7 @@ function language()
             document.getElementById("wordsjumble").innerHTML=" "
             document.getElementById("correct").innerHTML="";
             document.getElementById("wrong").innerHTML="";
-            document.getElementById("correctans").innerHTML="";
+             document.getElementById("correctans").innerHTML="";
             alert("Please Select A Language.");
 
         }   
@@ -286,7 +286,7 @@ function language()
         document.getElementById("checksent").innerHTML="";
         document.getElementById("correct").innerHTML="";
         document.getElementById("wrong").innerHTML="";
-        document.getElementById("correctans").innerHTML=""
+         document.getElementById("correctans").innerHTML=""
 
     }
     var answers="";
@@ -299,14 +299,14 @@ function language()
             {
             document.getElementById("correct").innerHTML="Correct Answer!";
             document.getElementById("wrong").innerHTML="";
-            document.getElementById("correctans").innerHTML=""
+             document.getElementById("correctans").innerHTML=""
 
             }
             else{
 
                 document.getElementById("wrong").innerHTML="Wrong Answer!";
                 document.getElementById("correct").innerHTML="";
-                document.getElementById("correctans").innerHTML="<button id='show' onclick='show(this.id)'>Get Correct Sentence</button>"
+                 document.getElementById("correctans").innerHTML="<button id='show' onclick='show(this.id)'>Get Correct Sentence</button>"
             }
         }
         else if(language=='hindi')
@@ -327,13 +327,13 @@ function language()
             {
                 document.getElementById("correct").innerHTML="Correct Answer!";
                 document.getElementById("wrong").innerHTML="";
-                document.getElementById("correctans").innerHTML=""
+                 document.getElementById("correctans").innerHTML=""
 
             }
             else{
                 document.getElementById("wrong").innerHTML="Wrong Answer!";
                 document.getElementById("correct").innerHTML="";
-                document.getElementById("correctans").innerHTML="<button id='getCorrectSentence' onclick='show(this.id)'>Get Correct Sentence</button>"
+                 document.getElementById("correctans").innerHTML="<button id='getCorrectSentence' onclick='show(this.id)'>Get Correct Sentence</button>"
 
             }
         }
