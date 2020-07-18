@@ -256,7 +256,7 @@ function language()
         }   
 }
     
-    var selectedSentence;
+   var selectedSentence;
     function func1(bid,bvalue)
         {
             document.getElementById("formedsent").innerHTML="Formed Sentence <span>(after selecting words):</span>";
@@ -276,3 +276,65 @@ function language()
 
 
         }
+    function reform()
+    {  
+        document.getElementById("wordsjumble").innerHTML = reformsents;
+        document.getElementById("formedsent").innerHTML="";
+        document.getElementById("choosenword").innerHTML ="";
+        document.getElementById("reformsent").innerHTML = "";
+        cn=0;
+        document.getElementById("checksent").innerHTML="";
+        document.getElementById("correct").innerHTML="";
+        document.getElementById("wrong").innerHTML="";
+        document.getElementById("correctans").innerHTML=""
+
+    }
+    var answers="";
+    function wordcheck()
+    {
+        var result= selectedSentence.trim();
+        if(language=='eng')
+        {
+            if (randomEnglish.includes(result))
+            {
+            document.getElementById("correct").innerHTML="Correct Answer!";
+            document.getElementById("wrong").innerHTML="";
+            document.getElementById("correctans").innerHTML=""
+
+            }
+            else{
+
+                document.getElementById("wrong").innerHTML="Wrong Answer!";
+                document.getElementById("correct").innerHTML="";
+                document.getElementById("correctans").innerHTML="<button id='show' onclick='show(this.id)'>Get Correct Sentence</button>"
+            }
+        }
+        else if(language=='hindi')
+        {var i=0;
+            result=result.trim();
+            console.log(result)
+            for(i=0;i<hindiSent.length;i++)
+            { var x=hindiSent[i];
+                if(x.localeCompare(result)==0)
+                {
+                    i=100; 
+                    console.log(i)
+                    break;   
+                }    
+            }
+            
+            if(i==100)
+            {
+                document.getElementById("correct").innerHTML="Correct Answer!";
+                document.getElementById("wrong").innerHTML="";
+                document.getElementById("correctans").innerHTML=""
+
+            }
+            else{
+                document.getElementById("wrong").innerHTML="Wrong Answer!";
+                document.getElementById("correct").innerHTML="";
+                document.getElementById("correctans").innerHTML="<button id='getCorrectSentence' onclick='show(this.id)'>Get Correct Sentence</button>"
+
+            }
+        }
+    }
