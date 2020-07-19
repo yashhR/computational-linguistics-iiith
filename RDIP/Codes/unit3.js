@@ -306,7 +306,7 @@ function language()
 
                 document.getElementById("wrong").innerHTML="Wrong Answer!";
                 document.getElementById("correct").innerHTML="";
-                 document.getElementById("correctans").innerHTML="<button id='show' onclick='show(this.id)'>Get Correct Sentence</button>"
+                 document.getElementById("correctans").innerHTML="<button id='func2' onclick='func2(this.id)'>Get Correct Sentence</button>"
             }
         }
         else if(language=='hindi')
@@ -333,8 +333,46 @@ function language()
             else{
                 document.getElementById("wrong").innerHTML="Wrong Answer!";
                 document.getElementById("correct").innerHTML="";
-                 document.getElementById("correctans").innerHTML="<button id='getCorrectSentence' onclick='show(this.id)'>Get Correct Sentence</button>"
+                 document.getElementById("correctans").innerHTML="<button id='getCorrectSentence' onclick='func2(this.id)'>Get Correct Sentence</button>"
 
             }
+        }
+    }
+    function func2(id)
+    {   var i=0;
+        document.getElementById(id).style.display="none";
+        document.getElementById("correctans").innerHTML="<button id='hide' onclick='func3()'>Hide the Correct Sentences</button>";
+        answers="";
+        if(language=="eng")
+        {var l=randomEnglish.length;
+            for(i=0;i<l;i++)
+            {  
+                console.log(randomEnglish[i])
+                document.getElementById("correctans").innerHTML+="<p>"+randomEnglish[i]+"</p><br>";
+                answers+="<p>"+randomEnglish[i]+"</p><br>";
+            }   
+        }
+        if(language=="hindi")
+        {var i=0;
+            for(i=0;i<randomHindi.length;i++)
+            {
+                console.log(randomHindi[i])
+                document.getElementById("correctans").innerHTML+="<p>"+randomHindi[i]+"</p><br>";
+                answers+="<p>"+randomHindi[i]+"</p><br>";  
+            }
+        }
+
+    }
+    function func3()
+    {
+        if(document.getElementById("hide").innerHTML=='Hide the Correct Sentences')
+        { 
+            document.getElementById("correctans").innerHTML="";
+            document.getElementById("correctans").innerHTML="<button id='hide' onclick='func3()'>Get Answers</button>";
+        }
+        else
+        {
+            document.getElementById("correctans").innerHTML+=answers;
+            document.getElementById("hide").innerHTML="Hide the Correct Sentences";    
         }
     }
