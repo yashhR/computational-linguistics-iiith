@@ -257,7 +257,8 @@ function language()
             var words=[];
             var k=0,m=0;
             while(arrwords.length>k)
-            { m = Math.floor(Math.random() * arrwords.length);
+            {
+             m = Math.floor(Math.random() * arrwords.length);
                 if(arrwords[m]!="no"){
                 words[k]=arrwords[m];
                 arrwords[m]="no";
@@ -286,7 +287,7 @@ function language()
             document.getElementById("wordsjumble").innerHTML=" "
             document.getElementById("correct").innerHTML="";
             document.getElementById("wrong").innerHTML="";
-             document.getElementById("correctans").innerHTML="";
+            document.getElementById("correctans").innerHTML="";
             alert("Please Select A Language.");
 
         }   
@@ -322,7 +323,7 @@ function language()
         document.getElementById("checksent").innerHTML="";
         document.getElementById("correct").innerHTML="";
         document.getElementById("wrong").innerHTML="";
-         document.getElementById("correctans").innerHTML=""
+        document.getElementById("correctans").innerHTML=""
 
     }
     var answers="";
@@ -335,22 +336,24 @@ function language()
             {
             document.getElementById("correct").innerHTML="Correct Answer!";
             document.getElementById("wrong").innerHTML="";
-             document.getElementById("correctans").innerHTML=""
+            document.getElementById("correctans").innerHTML=""
 
             }
             else{
 
                 document.getElementById("wrong").innerHTML="Wrong Answer!";
                 document.getElementById("correct").innerHTML="";
-                 document.getElementById("correctans").innerHTML="<button id='func2' onclick='func2(this.id)'>Get Correct Sentence</button>"
+                document.getElementById("correctans").innerHTML="<button id='func2' onclick='func2(this.id)'>Get Correct Sentence</button>"
             }
         }
         else if(language=='hindi')
-        {var i=0;
+        {
+            var i=0;
             result=result.trim();
             console.log(result)
             for(i=0;i<hindiSent.length;i++)
-            { var x=hindiSent[i];
+            { 
+                var x=hindiSent[i];
                 if(x.localeCompare(result)==0)
                 {
                     i=100; 
@@ -363,13 +366,13 @@ function language()
             {
                 document.getElementById("correct").innerHTML="Correct Answer!";
                 document.getElementById("wrong").innerHTML="";
-                 document.getElementById("correctans").innerHTML=""
+                document.getElementById("correctans").innerHTML=""
 
             }
             else{
                 document.getElementById("wrong").innerHTML="Wrong Answer!";
                 document.getElementById("correct").innerHTML="";
-                 document.getElementById("correctans").innerHTML="<button id='getCorrectSentence' onclick='func2(this.id)'>Get Correct Sentence</button>"
+                document.getElementById("correctans").innerHTML="<button id='getCorrectSentence' onclick='func2(this.id)'>Get Correct Sentence</button>"
 
             }
         }
