@@ -1,5 +1,8 @@
 html{
-    height: 50%;
+    height: 100%;
+    margin: auto;
+    width: 960px;
+    overflow: scroll;
 }
 body{
     background-color: white;
@@ -19,7 +22,7 @@ p {
  .goal3exp{
     margin: 0% 16%;
     padding:0%;
-    color:black);
+    color:black;
  }
  #introd{
     font-weight: 100;
@@ -27,12 +30,33 @@ p {
 
  }
  
- #wordsjumble,#choosenword,#reformsent,#checksent,#correctans{
+#wordsjumble{
      text-align: center;
      margin-top: 3%;
- }
+     font-size: 20px;
+}
+#choosenword{
+    text-align: center;
+     margin-top: 3%;
+     font-size: 20px;
+}
+#reformsent{
+    text-align: center;
+     margin-top: 3%;
+     font-size: 20px;
+}
+#checksent{
+    text-align: center;
+     margin-top: 3%;
+     font-size: 20px;
+}
+#correctans{
+    text-align: center;
+     margin-top: 3%;
+     font-size: 20px;
+}
  #selectedWord{
-     font-size: 100%;
+     font-size: 20px;
      font-weight: 100;
      color:black;
  }
@@ -44,14 +68,17 @@ p {
      margin-top: 2%;
      text-align: center;
      color:black;
-     font-weight: 100;
+     font-size: 20px;
+     font-weight: 50;
  }
  span{
      font-weight: 100;
+     font-size: 20px;
  }
  #correct{
      margin-top: 2%;
      font-size: 100%;
+     font-size: 10px;
      color: green;
      text-align: center;
  }
@@ -59,5 +86,6 @@ p {
      margin-top: 2%;
      font-size: 100%;
      color: red;
+     font-size: 20px;
      text-align: center;
  }
