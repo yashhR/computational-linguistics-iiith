@@ -1,3 +1,6 @@
+body{
+	background-color:white;
+}
 #h1{
 	font-size: 20px;
 	font-weight: 50%;
@@ -20,7 +23,7 @@
     line-height: 1.5;
     font-family: sans-serif;
     }
-#c2{
+#c2,#c4,#c5,#c6{
     font-size: 18px;
     margin-left: 50px;
     margin-right: 50px;
