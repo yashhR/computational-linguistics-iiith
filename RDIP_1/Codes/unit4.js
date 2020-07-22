@@ -80,3 +80,26 @@ function func1()
     document.getElementById("c3").innerHTML=""
     document.getElementById("cbutton1").innerHTML="Submit"
 }
+function func2()
+{
+    cn = 0;
+    var x = new Array()
+    var demo1 = new Array()
+    var a=document.getElementById("c1").innerHTML.toLowerCase().replace(/[^\w\s]/gi,"")
+    temp=a.split(" ")
+    const a1=temp.filter(temp1=> temp1.trim().length>0);
+    b=removeDuplicates(a1)
+    function removeDuplicates(array)
+    {
+        m = (array.filter((value,index) => array.indexOf(value) === index));
+        return m
+    }
+    for(i=0;i<b.length;i++)
+    {
+        var stemmer = new Snowball('English');
+        stemmer.setCurrent(b[i]);
+        stemmer.stem();
+        x.push(stemmer.getCurrent());            
+    }
+    console.log(x)
+}
