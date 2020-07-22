@@ -128,7 +128,7 @@ function func2()
 function func1()
 {
     document.getElementById("cbutton").style.visibility="hidden"
-    document.getElementById("c4").innerHTML="Now, consider all the tokens with the same 'root' word to be of the same type. Recalculate the number of types."
+    document.getElementById("c4").innerHTML="Now,consider all the tokens with the same 'root' word to be of the same type. Recalculate the number of types."
     document.getElementById("ip3").style.visibility="visible"
     document.getElementById("ip3").style.backgroundColor=""    
     document.getElementById("c5").innerHTML="#newtypes:"
