@@ -46,13 +46,19 @@
       }   
       if((document.getElementById('ip1').style.backgroundColor=='green')&&(document.getElementById('ip2').style.backgroundColor=='green'))
       {
-         document.getElementById('c3').innerHTML= '<span style=\'color:green: font-size:20px\'>Wrong Answer</span>'
+         document.getElementById('c3').innerHTML= '<span style=\'color:green: font-size:20px\'>Right Answer</span>'
+        document.getElementById('cbutton1').style.visibility='visible'
+      }
+      else
+        {
+        document.getElementById('c3').innerHTML= '<span style=\'color:red;font-size:20px\'>Wrong Answer</span>'
         document.getElementById('cbutton1').style.visibility='hidden'
-      }">Submit</button>
+      }
+      ">Submit</button>
       <p id="c4"></p>
       <p id="c5"></p><input type="text" name="ip3" id="ip3" style="visibility: hidden;">
       <p id="c3"></p>
-      <button id="cbutton1" style="visibility: hidden" onclick="func1(); z=func2();">continue
+      <button id="cbutton1" style="visibility: hidden" onclick="func1(); z=func2();func3()">continue
       </button>
     </div>
     <script src="..\Libraries\require.js"></script>

@@ -97,8 +97,8 @@ function func2()
     var a=document.getElementById("c1").innerHTML.toLowerCase().replace(/[^\w\s]/gi,"")
     temp=a.split(" ")
     const a1=temp.filter(temp1=> temp1.trim().length>0);
-    b=removeDuplicates(a1)
-    function removeDuplicates(array)
+    b=fun3(a1)
+    function fun3(array)
     {
         m = (array.filter((value,index) => array.indexOf(value) === index));
         return m
@@ -119,11 +119,24 @@ function func2()
     cn = removeusingSet(demo1)
     function removeusingSet(arr)
     {
-        let opArray = Array.from(new Set(arr))
-        console.log(opArray)
-        return opArray.length
+        let arr2 = Array.from(new Set(arr))
+        console.log(arr2)
+        return arr2.length
 
     }
     console.log(cn)
     return cn
+}
+function func3()
+{
+       if(document.getElementById("ip3").value == demo1)
+    {
+
+        document.getElementById("ip3").style.backgroundColor="green"
+        document.getElementById("c6").innerHTML='<span style=\'color:green; font-size:20px\'>Right Answer</span>'
+    }
+    else if(document.getElementById("ip3").value != demo1)
+    {
+        document.getElementById("ip3").style.backgroundColor="red"
+}
 }
