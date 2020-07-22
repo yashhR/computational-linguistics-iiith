@@ -1,0 +1,14 @@
+Functionalities observed for this experiment are as follows:
+On clicking the experiment button:
+A dropdown appears to choose a language we need:(i.e, English or Hindi)
+Then another dropdown appears to choose any one of the sentence of the choosen language
+After choosing the statement:
+A table appears on the screen, where it consists of the words of the sentences:
+Beside every word we have a dropdown where we can choose the parts of speech(pos) of the word in 
+the statement
+On clicking the submit button:
+It shows us whether the choosen answers are correct or not
+Another button appears "Get Answer"
+On choosing the "Get Answer" button the answers for the words appears on the last column
+Another button appears "Hide Answer" 
+On clicking it, it hides the answers for the words.
