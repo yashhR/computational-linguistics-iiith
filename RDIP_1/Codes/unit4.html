@@ -28,8 +28,8 @@
         </tbody>
       </table><br>
     </div></form>
-      <button id="cbutton" onclick="cr1=cortok(); cr2=cortyp();
-      if(parseInt(demo.ip1.value)==cr1)
+      <button id="cbutton" onclick="demo1=cortok(); demo2=cortyp();
+      if(parseInt(demo.ip1.value)==demo1)
       {
         document.getElementById('ip1').style.backgroundColor='gray'
       }
@@ -37,7 +37,7 @@
       {
         document.getElementById('ip1').style.backgroundColor='red'
       }
-      if(parseInt(demo.ip2.value)==cr2)
+      if(parseInt(demo.ip2.value)==demo2)
       {
         document.getElementById('ip2').style.backgroundColor='green'
       }
@@ -49,8 +49,9 @@
          document.getElementById('c3').innerHTML= '<span style=\'color:green: font-size:20px\'>Wrong Answer</span>'
         document.getElementById('cbutton1').style.visibility='hidden'
       }">Submit</button>
+      <p id="c4"></p>
       <p id="c3"></p>
-      <button id="cbutton1" style="visibility: hidden">continue</button>
+      <button id="cbutton1" style="visibility: hidden" onclick="func1()">continue</button>
     </div>
 </body>
 <script src="unit4.js" type="text/javascript"></script>

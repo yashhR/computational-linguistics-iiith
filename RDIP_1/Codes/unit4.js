@@ -4,13 +4,15 @@ function corpusfunc()
 {
     document.getElementById("c2").style.visibility="hidden"
     document.getElementById("ctable").style.visibility="hidden"
-    document.getElementById("cbutton").style.visibility="hidden"
+    document.getElementById("cbutton").style.visibility="hidden" 
     document.getElementById("ip1").value=""
     document.getElementById("ip2").value=""
     document.getElementById("ip1").style.backgroundColor=""
     document.getElementById("ip2").style.backgroundColor=""
     document.getElementById("c3").innerHTML=""
     document.getElementById("cbutton1").style.visibility="hidden"
+    document.getElementById("c4").innerHTML=""
+    document.getElementById("cbutton1").innerHTML="continue"
     if(document.getElementById("cor1").selected)
     {
         document.getElementById("c1").innerHTML='A mouse was having a very bad time. She could find no food at all. She looked here and there, but there was no food, and she grew very thin. At last the mouse found a basket, full of corn. There was a small hole in the basket, and she crept in. She could just get through the hole.Then she began to eat the corn. Being very hungry, she ate a great deal, and went on eating and eating. She had grown very fat before she felt that she had had enough.When the mouse tried to climb out of the basket, she could not. She was too fat to pass through the hole. How shall I climb out? said the mouse. oh, how shall I climb out? Just then a rat came along, and he heard the mouse. Mouse, said the rat, if you want to climb out of the basket, you must wait till you have grown as thin as you were when you went in.'
@@ -65,4 +67,11 @@ function cortyp()
     };
     console.log(b)
     return b
+}
+function func1()
+{
+    document.getElementById("cbutton").style.visibility="hidden"
+    document.getElementById("c4").innerHTML="Now, consider all the tokens with the same 'root' word to be of the same type. Recalculate the number of types."
+    document.getElementById("c3").innerHTML=""
+    document.getElementById("cbutton1").innerHTML="Submit"
 }
